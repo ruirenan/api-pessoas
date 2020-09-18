@@ -91,4 +91,8 @@ public class PessoaRepository {
 	public Pessoa getById(Integer id) {
 		return pessoas.stream().filter(pessoa -> pessoa.getId().equals(id)).findFirst().get();
 	}
+
+	public void delete(Integer id) {
+		pessoas.removeIf(pessoa -> pessoa.getId().equals(id));
+	}
 }

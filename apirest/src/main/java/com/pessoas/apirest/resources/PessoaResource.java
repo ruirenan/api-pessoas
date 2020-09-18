@@ -3,6 +3,7 @@ package com.pessoas.apirest.resources;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.pessoas.apirest.models.Pessoa;
 import com.pessoas.apirest.models.PessoaFisica;
+import com.pessoas.apirest.models.PessoaJuridica;
 import com.pessoas.apirest.repository.PessoaRepository;
 
 @RestController
@@ -35,6 +37,17 @@ public class PessoaResource {
 	@PostMapping("/pessoasFisicas")
 	public Pessoa salvaPessoaFisica(@RequestBody PessoaFisica pessoa) {
 		return pessoaRepository.save(pessoa);
+	}
+	
+	@PostMapping("/pessoasJuridicas")
+	public Pessoa salvaPessoaJuridica(@RequestBody PessoaJuridica pessoa) {
+		return pessoaRepository.save(pessoa);
+	}
+	
+	@DeleteMapping("/pessoas/{id}")
+	public void deletarPessoa(@PathVariable("id") Integer id) {
+		pessoaRepository.delete(id);
+	
 	}
 }
 
