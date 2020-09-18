@@ -1,0 +1,212 @@
+{
+	"info": {
+		"_postman_id": "f8fd8b47-85e9-44f9-8152-dad633a64e3c",
+		"name": "apiPessoas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create PJ",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nome\": \"Antonio carros ltda\",\r\n  \"telefones\": [\r\n    {\r\n      \"codigo\": \"55\",\r\n      \"ddd\": \"011\",\r\n      \"numero\": \"44444444\",\r\n      \"tipo\": \"Residencial\"\r\n    },\r\n    {\r\n      \"codigo\": \"55\",\r\n      \"ddd\": \"011\",\r\n      \"numero\": \"66666666\",\r\n      \"tipo\": \"Comercial\"\r\n    }\r\n  ],\r\n  \"enderecos\": [\r\n    {\r\n      \"tipoEndereco\": \"Comercial\",\r\n      \"tipo\": \"Rua\",\r\n      \"nome\": \"Dos Rodrigues\",\r\n      \"numero\": \"67\",\r\n      \"complemento\": \"\",\r\n      \"cep\": \"05070000\",\r\n      \"bairro\": \"Freguesia do Ó\",\r\n      \"cidade\": \"São Paulo\",\r\n      \"estado\": \"SP\",\r\n      \"pais\": \"Brasil\"\r\n    }\r\n  ],\r\n  \"nomeFantasia\": \"TonyCar\",\r\n  \"cnpj\": \"0555633200001\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/pessoasJuridicas/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pessoasJuridicas",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create PF",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nome\": \"Antonio\",\r\n  \"telefones\": [\r\n    {\r\n      \"codigo\": \"55\",\r\n      \"ddd\": \"011\",\r\n      \"numero\": \"55555555\",\r\n      \"tipo\": \"Residencial\"\r\n    },\r\n    {\r\n      \"codigo\": \"55\",\r\n      \"ddd\": \"011\",\r\n      \"numero\": \"55555533\",\r\n      \"tipo\": \"Comercial\"\r\n    }\r\n  ],\r\n  \"enderecos\": [\r\n    {\r\n      \"tipoEndereco\": \"Residencial\",\r\n      \"tipo\": \"Rua\",\r\n      \"nome\": \"Dos Rodrigues\",\r\n      \"numero\": \"67\",\r\n      \"complemento\": \"\",\r\n      \"cep\": \"05070000\",\r\n      \"bairro\": \"Freguesia do Ó\",\r\n      \"cidade\": \"São Paulo\",\r\n      \"estado\": \"SP\",\r\n      \"pais\": \"Brasil\"\r\n    },\r\n    {\r\n      \"tipoEndereco\": \"Comercial\",\r\n      \"tipo\": \"Rua\",\r\n      \"nome\": \"Dos Rodrigues\",\r\n      \"numero\": \"80\",\r\n      \"complemento\": \"Casa2\",\r\n      \"cep\": \"05070000\",\r\n      \"bairro\": \"Freguesia do Ó\",\r\n      \"cidade\": \"São Paulo\",\r\n      \"estado\": \"SP\",\r\n      \"pais\": \"Brasil\"\r\n    }\r\n  ],\r\n  \"apelido\": \"Tom\",\r\n  \"cpf\": \"30558869860\",\r\n  \"profissao\": \"Engenheiro\",\r\n  \"salario\": 5000.0,\r\n  \"dataNascimento\": \"2020-09-18T21:09:40.729+00:00\",\r\n  \"dependentes\": [\r\n    {\r\n      \"nomeCompleto\": \"Thomas\",\r\n      \"tipo\": \"irmão\"\r\n    },\r\n    {\r\n      \"nomeCompleto\": \"Luciana\",\r\n      \"tipo\": \"mãe\"\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/pessoasFisicas/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pessoasFisicas",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Read Todos",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/pessoas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pessoas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Read por ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/pessoas/0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pessoas",
+						"0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update PF",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 1,\r\n  \"nome\": \"Paulo\",\r\n  \"telefones\": [\r\n    {\r\n      \"codigo\": \"20\",\r\n      \"ddd\": \"011\",\r\n      \"numero\": \"55555775\",\r\n      \"tipo\": \"Residencial\"\r\n    },\r\n    {\r\n      \"codigo\": \"55\",\r\n      \"ddd\": \"011\",\r\n      \"numero\": \"45555533\",\r\n      \"tipo\": \"Comercial\"\r\n    }\r\n  ],\r\n  \"enderecos\": [\r\n    {\r\n      \"tipoEndereco\": \"Residencial\",\r\n      \"tipo\": \"Rua\",\r\n      \"nome\": \"Raimundo\",\r\n      \"numero\": \"80\",\r\n      \"complemento\": \"\",\r\n      \"cep\": \"05070030\",\r\n      \"bairro\": \"Pirituba\",\r\n      \"cidade\": \"São Paulo\",\r\n      \"estado\": \"SP\",\r\n      \"pais\": \"Brasil\"\r\n    },\r\n    {\r\n      \"tipoEndereco\": \"Comercial\",\r\n      \"tipo\": \"Av.\",\r\n      \"nome\": \"Jararaca\",\r\n      \"numero\": \"800\",\r\n      \"complemento\": \"A\",\r\n      \"cep\": \"04022000\",\r\n      \"bairro\": \"Ribeirão Nunes\",\r\n      \"cidade\": \"São Paulo\",\r\n      \"estado\": \"SP\",\r\n      \"pais\": \"Brasil\"\r\n    }\r\n  ],\r\n  \"apelido\": \"Ch8\",\r\n  \"cpf\": \"8500869860\",\r\n  \"profissao\": \"Professor\",\r\n  \"salario\": 6000.0,\r\n  \"dataNascimento\": \"2020-09-18T21:53:40.599+00:00\",\r\n  \"dependentes\": [\r\n    {\r\n      \"nomeCompleto\": \"Fabio\",\r\n      \"tipo\": \"irmão\"\r\n    },\r\n    {\r\n      \"nomeCompleto\": \"Elza\",\r\n      \"tipo\": \"mãe\"\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/pessoasFisicas/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pessoasFisicas",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update PJ",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 2,\r\n  \"nome\": \"Antonio carros ltda\",\r\n  \"telefones\": [\r\n    {\r\n      \"codigo\": \"20\",\r\n      \"ddd\": \"011\",\r\n      \"numero\": \"44444444\",\r\n      \"tipo\": \"Residencial\"\r\n    },\r\n    {\r\n      \"codigo\": \"55\",\r\n      \"ddd\": \"011\",\r\n      \"numero\": \"66666666\",\r\n      \"tipo\": \"Comercial\"\r\n    }\r\n  ],\r\n  \"enderecos\": [\r\n    {\r\n      \"tipoEndereco\": \"Comercial\",\r\n      \"tipo\": \"Rua\",\r\n      \"nome\": \"Dos Rodrigues\",\r\n      \"numero\": \"67\",\r\n      \"complemento\": \"\",\r\n      \"cep\": \"05070000\",\r\n      \"bairro\": \"Freguesia do Ó\",\r\n      \"cidade\": \"São Paulo\",\r\n      \"estado\": \"SP\",\r\n      \"pais\": \"Brasil\"\r\n    }\r\n  ],\r\n  \"nomeFantasia\": \"TonyCar\",\r\n  \"cnpj\": \"0555633200001\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/pessoasJuridicas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pessoasJuridicas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Pessoa",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/pessoas/0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pessoas",
+						"0"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
