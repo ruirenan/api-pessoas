@@ -95,4 +95,14 @@ public class PessoaRepository {
 	public void delete(Integer id) {
 		pessoas.removeIf(pessoa -> pessoa.getId().equals(id));
 	}
+
+	public void update(Pessoa pessoa) {
+		int couter = 0;
+		for(Pessoa pessoa1 : pessoas) {
+			if (pessoa1.getId().equals(pessoa.getId())) {
+				pessoas.set(couter,  pessoa);
+			}
+			couter++;
+		}
+	}
 }
