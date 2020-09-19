@@ -9,11 +9,11 @@ public class PessoaFisica extends Pessoa{
 	private String cpf;
 	private String profissao;
 	private Double salario;
-	private Date dataNascimento;
+	private String dataNascimento;
 	private List<Dependente> dependentes;
 
 	
-	public PessoaFisica(String nome,String apelido,String cpf,String profissao, Double salario, Date dataNascimento, List<Dependente> dependentes, List<Telefone> telefones, List<Endereco> enderecos) {
+	public PessoaFisica(String nome,String apelido,String cpf,String profissao, Double salario, String dataNascimento, List<Dependente> dependentes, List<Telefone> telefones, List<Endereco> enderecos) {
 		super(nome, telefones, enderecos);
 		this.nome = nome;
 		this.apelido = apelido;
@@ -49,10 +49,10 @@ public class PessoaFisica extends Pessoa{
 	public void setSalario(Double salario) {
 		this.salario = salario;
 	}
-	public Date getDataNascimento() {
+	public String getDataNascimento() {
 		return dataNascimento;
 	}
-	public void setDataNascimento(Date dataNascimento) {
+	public void setDataNascimento(String dataNascimento) {
 		this.dataNascimento = dataNascimento;
 	}
 

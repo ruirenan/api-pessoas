@@ -32,7 +32,7 @@ public class PessoaRepository {
 				"30558869860", 
 				"Engenheiro", 
 				5000.00, 
-				new Date(), 
+				"25/03/1980", 
 				new ArrayList<Dependente>(Arrays.asList(
 						new Dependente("Thomas","irmão"), 
 						new Dependente("Luciana","mãe")
@@ -52,7 +52,7 @@ public class PessoaRepository {
 				"8500869860", 
 				"Professor", 
 				6000.00, 
-				new Date(), 
+				"10/10/1980", 
 				new ArrayList<Dependente>(Arrays.asList(
 						new Dependente("Fabio","irmão"), 
 						new Dependente("Elza","mãe")
