@@ -2,7 +2,6 @@ package com.pessoas.apirest.repository;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Date;
 import java.util.List;
 
 import org.springframework.stereotype.Repository;

@@ -1,6 +1,5 @@
 package com.pessoas.apirest.models;
 
-import java.util.Date;
 import java.util.List;
 
 public class PessoaFisica extends Pessoa{
